@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WhatsApp 翻译助手，实时翻译、多语言支持、轻量高效，帮助你在 WhatsApp 中无障碍沟通。"
+    />
+    <meta name="theme-color" content="#ff7a18" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>WhatsApp 翻译助手 | 跨语言聊天更自然</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --brand-orange: #ff7a18;
+        --brand-cyan: #06b6d4;
+        --ink: #0f172a;
+        --paper: #fff7ed;
+      }
+    </style>
+  </head>
+  <body class="bg-[var(--paper)] text-[var(--ink)] antialiased">
+    <main class="relative overflow-hidden">
+      <div class="pointer-events-none absolute -left-20 -top-16 h-72 w-72 rounded-full bg-orange-300/50 blur-3xl"></div>
+      <div class="pointer-events-none absolute -right-16 top-28 h-72 w-72 rounded-full bg-cyan-300/50 blur-3xl"></div>
+
+      <section id="hero" class="mx-auto max-w-6xl px-6 pb-16 pt-14">
+        <div class="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+          <div>
+            <p class="inline-flex rounded-full bg-white px-4 py-1 text-sm font-semibold shadow-sm ring-1 ring-orange-200">
+              WhatsApp 翻译助手
+            </p>
+            <h1 class="mt-5 text-4xl font-extrabold leading-tight md:text-6xl">
+              让跨语言聊天像母语一样自然
+            </h1>
+            <p class="mt-4 max-w-xl text-base text-slate-700 md:text-lg">
+              实时翻译、自然表达、低学习成本，日常沟通和商务场景都能快速上手。
+            </p>
+            <div id="hero-downloads" class="mt-8 grid w-full max-w-xl grid-cols-2 gap-3 sm:grid-cols-4">
+              <a href="https://pan.baidu.com/s/19Crs1jG_nvueiPgZQB9qDQ?pwd=3m37" target="_blank" rel="noopener noreferrer" class="whitespace-nowrap rounded-2xl bg-slate-900 px-4 py-3 text-center text-sm font-bold text-white transition hover:-translate-y-0.5">Windows 下载</a>
+              <a href="https://pan.baidu.com/s/19Crs1jG_nvueiPgZQB9qDQ?pwd=3m37" target="_blank" rel="noopener noreferrer" class="whitespace-nowrap rounded-2xl bg-white px-4 py-3 text-center text-sm font-bold text-slate-900 ring-1 ring-slate-300 transition hover:-translate-y-0.5">macOS 下载</a>
+              <a href="https://pan.baidu.com/s/19Crs1jG_nvueiPgZQB9qDQ?pwd=3m37" target="_blank" rel="noopener noreferrer" class="whitespace-nowrap rounded-2xl bg-emerald-500 px-4 py-3 text-center text-sm font-bold text-white transition hover:-translate-y-0.5">Android 下载</a>
+              <a href="https://pan.baidu.com/s/19Crs1jG_nvueiPgZQB9qDQ?pwd=3m37" target="_blank" rel="noopener noreferrer" class="whitespace-nowrap rounded-2xl bg-zinc-800 px-4 py-3 text-center text-sm font-bold text-white transition hover:-translate-y-0.5">iOS 下载</a>
+            </div>
+            <div id="free-trial-banner" class="mt-4 w-full max-w-xl rounded-2xl bg-gradient-to-r from-amber-400 via-orange-500 to-cyan-500 p-[1px] shadow-lg shadow-orange-300/50">
+              <div class="rounded-2xl bg-white/95 px-4 py-3">
+                <p class="text-xs font-black tracking-wide text-orange-600">FREE TRIAL</p>
+                <p class="mt-1 text-base font-extrabold text-slate-900 md:text-lg">0门槛免费试用，下载后立即体验核心翻译功能</p>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-3xl bg-white/80 p-4 shadow-xl ring-1 ring-orange-100 backdrop-blur">
+            <div class="grid gap-3 sm:grid-cols-2">
+              <div
+                id="hero-contact"
+                class="group sm:col-span-2 w-full rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 p-4 text-white shadow-md transition hover:-translate-y-0.5"
+              >
+                <p class="text-xs font-semibold tracking-wide text-orange-200">联系方式</p>
+                <p class="mt-2 text-sm font-semibold">添加微信好友，快速获取产品咨询</p>
+                <img
+                  id="hero-contact-qr"
+                  src="assets/wechat_qrcode.png"
+                  alt="Hero 联系方式二维码"
+                  class="mx-auto mt-3 w-full max-w-[220px] rounded-xl bg-white/95 p-2.5 object-contain"
+                />
+              </div>
+              <div class="rounded-2xl bg-gradient-to-br from-orange-400 to-orange-200 p-5 text-sm font-semibold text-white">跨语言聊天无需切换工具</div>
+              <div class="rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-300 p-5 text-sm font-semibold text-white">消息翻译即看即用</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="highlights" class="mx-auto max-w-6xl px-6 py-12">
+        <div class="mb-6 flex items-end justify-between gap-4">
+          <div>
+            <h2 class="text-3xl font-extrabold">功能亮点</h2>
+            <p class="mt-2 text-sm text-slate-600">专为 WhatsApp 场景打造的翻译体验。</p>
+          </div>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+            <h3 class="text-lg font-bold">实时翻译</h3>
+            <p class="mt-2 text-sm text-slate-600">聊天消息即时翻译，减少等待时间。</p>
+          </article>
+          <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+            <h3 class="text-lg font-bold">上下文理解</h3>
+            <p class="mt-2 text-sm text-slate-600">结合会话语境输出更自然的表达。</p>
+          </article>
+          <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+            <h3 class="text-lg font-bold">多语言支持</h3>
+            <p class="mt-2 text-sm text-slate-600">覆盖常见沟通语言，切换灵活。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="screenshots" class="mx-auto max-w-6xl px-6 py-12">
+        <div class="flex items-end justify-between gap-4">
+          <div>
+            <h2 class="text-3xl font-extrabold">演示流程截图</h2>
+            <p class="mt-2 text-sm text-slate-600">真实产品界面，覆盖登录、账号添加、翻译与设置流程。</p>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <figure class="overflow-hidden rounded-3xl bg-white p-3 shadow-sm ring-1 ring-slate-100">
+            <button type="button" data-lightbox="assets/login.png" data-lightbox-alt="登录界面截图" class="block w-full">
+              <img src="assets/login.png" alt="登录界面截图" class="h-64 w-full cursor-zoom-in rounded-2xl object-cover transition hover:scale-[1.01]" />
+            </button>
+          </figure>
+          <figure class="overflow-hidden rounded-3xl bg-white p-3 shadow-sm ring-1 ring-slate-100">
+            <button type="button" data-lightbox="assets/add_account.png" data-lightbox-alt="添加账号截图" class="block w-full">
+              <img src="assets/add_account.png" alt="添加账号截图" class="h-64 w-full cursor-zoom-in rounded-2xl object-cover transition hover:scale-[1.01]" />
+            </button>
+          </figure>
+          <figure class="overflow-hidden rounded-3xl bg-white p-3 shadow-sm ring-1 ring-slate-100">
+            <button type="button" data-lightbox="assets/setting.png" data-lightbox-alt="设置页面截图" class="block w-full">
+              <img src="assets/setting.png" alt="设置页面截图" class="h-64 w-full cursor-zoom-in rounded-2xl object-cover transition hover:scale-[1.01]" />
+            </button>
+          </figure>
+          <figure class="overflow-hidden rounded-3xl bg-white p-3 shadow-sm ring-1 ring-slate-100">
+            <button type="button" data-lightbox="assets/page01.png" data-lightbox-alt="主界面截图" class="block w-full">
+              <img src="assets/page01.png" alt="主界面截图" class="h-64 w-full cursor-zoom-in rounded-2xl object-cover transition hover:scale-[1.01]" />
+            </button>
+          </figure>
+          <figure class="overflow-hidden rounded-3xl bg-white p-3 shadow-sm ring-1 ring-slate-100">
+            <button type="button" data-lightbox="assets/page02.jpg" data-lightbox-alt="翻译流程截图" class="block w-full">
+              <img src="assets/page02.jpg" alt="翻译流程截图" class="h-64 w-full cursor-zoom-in rounded-2xl object-cover transition hover:scale-[1.01]" />
+            </button>
+          </figure>
+          <figure class="overflow-hidden rounded-3xl bg-white p-3 shadow-sm ring-1 ring-slate-100">
+            <button type="button" data-lightbox="assets/page03.jpg" data-lightbox-alt="多语言会话截图" class="block w-full">
+              <img src="assets/page03.jpg" alt="多语言会话截图" class="h-64 w-full cursor-zoom-in rounded-2xl object-cover transition hover:scale-[1.01]" />
+            </button>
+          </figure>
+        </div>
+      </section>
+
+      <div id="lightbox-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/85 p-4 md:p-8">
+        <div class="relative w-full max-w-5xl">
+          <button id="lightbox-close" type="button" class="absolute -right-1 -top-12 rounded-xl bg-white/90 px-3 py-1 text-sm font-semibold text-slate-800">关闭</button>
+          <img id="lightbox-image" src="" alt="截图放大预览" class="mx-auto max-h-[78vh] w-auto max-w-full rounded-2xl bg-white object-contain p-2" />
+          <p id="lightbox-caption" class="mt-3 text-center text-sm text-slate-200"></p>
+        </div>
+      </div>
+
+      <section id="download" class="mx-auto max-w-6xl px-6 pb-20 pt-8">
+        <div class="rounded-3xl bg-slate-900 px-6 py-10 text-white md:px-10">
+          <h2 class="text-3xl font-extrabold">立即下载，开启跨语言沟通</h2>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://pan.baidu.com/s/19Crs1jG_nvueiPgZQB9qDQ?pwd=3m37" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-white px-6 py-3 text-sm font-bold text-slate-900 transition hover:-translate-y-0.5">Windows 下载</a>
+            <a href="https://pan.baidu.com/s/19Crs1jG_nvueiPgZQB9qDQ?pwd=3m37" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-white/10 px-6 py-3 text-sm font-bold text-white ring-1 ring-white/30 transition hover:-translate-y-0.5">macOS 下载</a>
+            <a href="https://pan.baidu.com/s/19Crs1jG_nvueiPgZQB9qDQ?pwd=3m37" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-emerald-500 px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5">Android 下载</a>
+            <a href="https://pan.baidu.com/s/19Crs1jG_nvueiPgZQB9qDQ?pwd=3m37" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-zinc-800 px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5">iOS 下载</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="mx-auto max-w-6xl px-6 pb-16">
+        <div class="grid items-center gap-8 rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100 md:grid-cols-2 md:p-8">
+          <div>
+            <p class="inline-flex rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-orange-700">联系方式</p>
+            <h2 class="mt-4 text-3xl font-extrabold">添加联系方式</h2>
+            <p class="mt-3 text-sm text-slate-600 md:text-base">扫描右侧微信二维码添加好友，获取产品演示、使用咨询和商务合作支持。</p>
+            <p class="mt-2 text-xs text-slate-500">建议在手机微信中使用“扫一扫”完成添加。</p>
+          </div>
+          <figure class="mx-auto w-full max-w-xs rounded-3xl bg-slate-50 p-4 ring-1 ring-slate-200">
+            <img src="assets/wechat_qrcode.png" alt="微信添加好友二维码" class="w-full rounded-2xl object-cover" />
+            <figcaption class="mt-3 text-center text-sm text-slate-600">微信添加好友二维码</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <footer id="footer" class="border-t border-slate-200/80 bg-white/70">
+        <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-8 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
+          <p class="font-semibold text-slate-700">WhatsApp 翻译助手</p>
+          <p>© 2026 Triton. 保留所有权利。</p>
+        </div>
+      </footer>
+    </main>
+    <script>
+      (() => {
+        const modal = document.getElementById('lightbox-modal');
+        const modalImage = document.getElementById('lightbox-image');
+        const modalCaption = document.getElementById('lightbox-caption');
+        const closeButton = document.getElementById('lightbox-close');
+        const triggers = document.querySelectorAll('[data-lightbox]');
+
+        if (!modal || !modalImage || !modalCaption || !closeButton || triggers.length === 0) {
+          return;
+        }
+
+        const openLightbox = (src, caption) => {
+          modalImage.src = src;
+          modalImage.alt = caption || '截图放大预览';
+          modalCaption.textContent = caption || '';
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          document.body.classList.add('overflow-hidden');
+        };
+
+        const closeLightbox = () => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          modalImage.src = '';
+          modalCaption.textContent = '';
+          document.body.classList.remove('overflow-hidden');
+        };
+
+        for (const trigger of triggers) {
+          trigger.addEventListener('click', () => {
+            openLightbox(trigger.dataset.lightbox, trigger.dataset.lightboxAlt);
+          });
+        }
+
+        closeButton.addEventListener('click', closeLightbox);
+        modal.addEventListener('click', (event) => {
+          if (event.target === modal) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeLightbox();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
