@@ -15,6 +15,15 @@ required_tokens=(
   "id=\"hero-contact\""
   "id=\"hero-contact-qr\""
   "id=\"hero-downloads\""
+  "id=\"agency\""
+  "id=\"agency-cta\""
+  "id=\"agency-wechat-qr\""
+  "h-32 w-32"
+  "href=\"#contact\""
+  "返佣上限"
+  "40%"
+  "T+7"
+  "代理分销计划"
   "sm:grid-cols-4"
   "whitespace-nowrap"
   "max-w-[220px]"
@@ -35,8 +44,26 @@ if grep -Fq -- "sm:max-w-sm" "$FILE"; then
   exit 1
 fi
 
-if grep -Fq -- "href=\"#contact\"" "$FILE"; then
+flat_html=$(tr '\n' ' ' < "$FILE")
+
+if printf '%s' "$flat_html" | grep -Eq '<a[^>]*id=\"hero-contact\"'; then
+  echo "FAIL: hero top card should not be an anchor element"
+  exit 1
+fi
+
+if printf '%s' "$flat_html" | grep -Eq 'id=\"hero-contact\"[^>]*href=\"#contact\"'; then
   echo "FAIL: hero top card should not use #contact anchor"
+  exit 1
+fi
+
+agency_cta_count=$( (grep -o 'id=\"agency-cta\"' "$FILE" || true) | wc -l | tr -d ' ' )
+if [[ "$agency_cta_count" -ne 1 ]]; then
+  echo "FAIL: expected exactly one agency CTA, got $agency_cta_count"
+  exit 1
+fi
+
+if grep -Fq -- "id=\"agency-qr-panel\"" "$FILE"; then
+  echo "FAIL: agency QR panel layout should be removed"
   exit 1
 fi
 
